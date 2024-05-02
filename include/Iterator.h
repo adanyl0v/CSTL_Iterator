@@ -15,10 +15,6 @@ typedef struct CSTL_Iterator {
 extern "C" {
 #endif
 
-#ifndef CSTL_GetIteratorContainer
-# define CSTL_GetIteratorContainer(CT, IT) (CT *)_CSTL_GetIteratorContainer(IT)
-#endif /* CSTL_GetIteratorContainer */
-
 #ifndef CSTL_GetIteratorData
 # define CSTL_GetIteratorData(CT, IT) ((CT##Element *)((Iterator *)IT)->element)->data
 #endif /* CSTL_GetIteratorData */
