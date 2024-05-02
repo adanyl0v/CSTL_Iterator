@@ -3,7 +3,7 @@ if(.. STREQUAL ${CMAKE_CURRENT_BINARY_DIR})
 endif()
 
 cmake_minimum_required(VERSION 3.5)
-project(CSTL_Iterator VERSION 1.0.0 LANGUAGES C)
+project(CSTL_Iterator VERSION 1.0.1 LANGUAGES C)
 
 set(CMAKE_C_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN TRUE)

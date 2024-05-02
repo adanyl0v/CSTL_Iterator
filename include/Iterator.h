@@ -16,16 +16,16 @@ extern "C" {
 #endif
 
 #ifndef CSTL_GetIteratorData
-# define CSTL_GetIteratorData(CT, IT) ((CT##Element *)((CSTL_Iterator *)IT)->element)->data
+# define CSTL_GetIteratorData(CT, IT) _CSTL_FDECL_Iterator_##CT##_getData(IT)
 #endif /* CSTL_GetIteratorData */
 
 #ifndef CSTL_SetIteratorData
-# define CSTL_SetIteratorData(CT, IT, DATA) ((CT##Element *)((CSTL_Iterator *)IT)->element)->data = DATA
+# define CSTL_SetIteratorData(CT, IT, DATA) _CSTL_FDECL_Iterator_##CT##_setData(IT, DATA)
 #endif /* CSTL_SetIteratorData */
 
 #ifndef CSTL_IsIteratorEquals
 # define CSTL_IsIteratorEquals(CT, IT1, IT2) \
-    CSTL_GetIteratorData(CT, IT1) == CSTL_GetIteratorData(CT, IT2) ? CSTL_TRUE : CSTL_FALSE
+    (CSTL_GetIteratorData(CT, IT1) == CSTL_GetIteratorData(CT, IT2) ? CSTL_TRUE : CSTL_FALSE)
 #endif /* CSTL_IsIteratorEquals */
 
 #ifndef CSTL_IterateForward
